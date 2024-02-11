@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Task2</title>
+  <style>
+    body {
+      background-color: skyblue;
+      text-align: center;
+    }
+    
+    h1 {
+      background-color: red;
+      text-align: center;
+      padding: 20px;
+      color: white;
+    }
+    
+    #colorButton {
+      padding: 20px 50px;
+      background-color: green;
+      color: white;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #colorButton:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+  <h1>Simple JavaScript Task</h1>
+  <button id="colorButton">Change Color</button>
+  <script>
+    var currentHour = new Date().getHours();
+    var greeting;
+    if (currentHour < 12) {
+      greeting = "Good morning!";
+    } else if (currentHour < 18) {
+      greeting = "Good afternoon!";
+    } else {
+      greeting = "Good evening!";
+    }
+    alert(greeting);
+  </script>
+  <script>
+    function addNumbers() {
+      var num1 = parseFloat(prompt("Enter first number:"));
+      var num2 = parseFloat(prompt("Enter second number:"));
+      var result = num1 + num2;
+      alert("The result is: " + result);
+    }
+  </script>
+  <button onclick="addNumbers()">Add Numbers</button>
+  <script>
+    document.getElementById("colorButton").onclick = function() {
+      document.getElementById("colorButton").style.backgroundColor = "black";
+    };
+  </script>
+</body>
+</html>
